@@ -3,7 +3,7 @@ kdniao\_python
 
 快递鸟 Python 客户端。\ https://github.com/menduo/kdniao_python
 
-    version: 0.1.2-beta
+    version: 0.1.1-beta
 
 非官方。无利益关系。
 
