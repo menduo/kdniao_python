@@ -1,7 +1,7 @@
-kdniao-python
-=============
+kdniao\_python
+==============
 
-快递鸟 Python 客户端。\ https://github.com/menduo/kdniao-python
+快递鸟 Python 客户端。\ https://github.com/menduo/kdniao_python
 
     version: 0.1.2-beta
 
@@ -138,4 +138,4 @@ Tornado-Async 异步客户端
 ====
 
 -  ``shimenduo AT gmail DOT com``
--  https://github.com/menduo/kdniao-python/issues
+-  https://github.com/menduo/kdniao_python/issues
