@@ -59,6 +59,7 @@ class API(object):
         self.api_order = APIOrder(self)
         self.api_monitor = APIMonitor(self)
         self.api_user = APIUser(self)
+        self.api_collect = APICollectionMoney(self)
 
         # Method exported 常用接口导出
         self.track = self.api_track.track
