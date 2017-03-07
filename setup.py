@@ -4,14 +4,13 @@
 快递鸟 Python SDK
 """
 from setuptools import setup, find_packages
-import kdniao
 
 repo_url = "https://github.com/menduo/kdniao_python"
-version = kdniao.__version__
+__version__ = "0.1.2"
 
 setup(
     name="kdniao",
-    version=version,
+    version=__version__,
     keywords=("kdniao", "express", "Express inquiry"),
     description="Python SDK for Kdniao",
     long_description="see more at:\n%s\n" % repo_url,

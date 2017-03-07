@@ -145,7 +145,7 @@ class KdNiaoClient(API):
             biz_ecode = BizRespCode.Failed
             msg = data.pop("_msg", "Unknow Error")
 
-        data_keys = data.keys()
+        data_keys = list(data.keys())
         data_keys.remove("code_http")
         if data_keys == 1 and data_keys[0] == "Message":
             api_ecode = APIErrorCode.Failed

@@ -26,6 +26,7 @@ if os.path.exists(join(_path_of_kdniao_dir, "client.py")):
     sys.path.insert(0, _p_parent_dir)
 
 from kdniao.client import KdNiaoClient
+from kdniao import __version__
 
 CLIENT = None
 
@@ -46,8 +47,8 @@ def parse_args():
     """
     Define and parse `optparse` options for command-line usage.
     """
-    usage = """kdniao 运单号 快递公司编号"""
-    desc = "快递鸟～～～"
+    usage = """kdniao 运单号 [--s=快递公司编号 --ik=AppId,AppKey]"""
+    desc = "快递鸟 ～～～ %s" % __version__
 
     parser = argparse.ArgumentParser(usage=usage, description=desc)
     parser.add_argument("logistic_code", type=str, help="logistic code 运单号")
