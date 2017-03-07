@@ -1,8 +1,10 @@
 kdniao\_python
 ==============
 
-快递鸟 Python 客户端。 - github: https://github.com/menduo/kdniao_python
-- oschina: https://git.oschina.net/menduo/kdniao_python
+快递鸟 kdniao python sdk, with tornado async http client support.
+
+-  github: https://github.com/menduo/kdniao_python
+-  oschina: https://git.oschina.net/menduo/kdniao_python
 
     version: 0.1.1-beta
 
@@ -100,8 +102,8 @@ Sync 同步客户端
 
     # Your logic code here
 
-Tornado-Async 异步客户端
-~~~~~~~~~~~~~~~~~~~~~~~~
+Tornado Async Client 异步客户端
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: python
 

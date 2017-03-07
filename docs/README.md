@@ -1,6 +1,7 @@
 # kdniao_python
 
-快递鸟 Python 客户端。
+快递鸟 kdniao python sdk, with tornado async http client support. 
+
 - github: [https://github.com/menduo/kdniao_python](https://github.com/menduo/kdniao_python)
 - oschina: [https://git.oschina.net/menduo/kdniao_python](https://git.oschina.net/menduo/kdniao_python)
 
@@ -80,7 +81,7 @@ trace_res = client.api_track.track(logistic_code, shipper_code, order_code, time
 # Your logic code here
 ```
 
-### Tornado-Async 异步客户端
+### Tornado Async Client 异步客户端
 ```python
 from kdniao.client import KdNiaoAsyncClient
 app_id = 12345678
