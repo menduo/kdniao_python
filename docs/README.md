@@ -5,9 +5,12 @@
 - github: [https://github.com/menduo/kdniao_python](https://github.com/menduo/kdniao_python)
 - oschina: [https://git.oschina.net/menduo/kdniao_python](https://git.oschina.net/menduo/kdniao_python)
 
-> version: 0.1.1-beta
+> version: 0.1.2
 
 非官方。无利益关系。
+
+# Screenshot(terminal)
+![](./asset/menduo_kdniao_py.png)
 
 # TODO
 - doc, more doc
