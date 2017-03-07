@@ -1,6 +1,8 @@
 # kdniao_python
 
-快递鸟 Python 客户端。[https://github.com/menduo/kdniao_python](https://github.com/menduo/kdniao_python)
+快递鸟 Python 客户端。
+- github: [https://github.com/menduo/kdniao_python](https://github.com/menduo/kdniao_python)
+- oschina: [https://git.oschina.net/menduo/kdniao_python](https://git.oschina.net/menduo/kdniao_python)
 
 > version: 0.1.1-beta
 
@@ -108,4 +110,5 @@ trace_res = yield async_client.api_track.track(logistic_code, shipper_code, orde
 
 # 联系
 - `shimenduo AT gmail DOT com`
-- [https://github.com/menduo/kdniao_python/issues](https://github.com/menduo/kdniao_python/issues)
+- github: [https://github.com/menduo/kdniao_python](https://github.com/menduo/kdniao_python)
+- oschina: [https://git.oschina.net/menduo/kdniao_python](https://git.oschina.net/menduo/kdniao_python)
