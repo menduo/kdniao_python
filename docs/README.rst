@@ -13,7 +13,7 @@ kdniao\_python
 Screenshot(terminal)
 ====================
 
-.. figure:: ./asset/menduo_kdniao_py.png
+.. figure:: https://raw.githubusercontent.com/menduo/kdniao_python/master/asset/menduo_kdniao_py.png
    :alt: 
 
 TODO

@@ -10,7 +10,7 @@
 非官方。无利益关系。
 
 # Screenshot(terminal)
-![](./asset/menduo_kdniao_py.png)
+![](https://raw.githubusercontent.com/menduo/kdniao_python/master/asset/menduo_kdniao_py.png)
 
 # TODO
 - doc, more doc
