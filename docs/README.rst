@@ -109,7 +109,7 @@ Sync 同步客户端
     # Your logic code here
 
 Tornado Async Client 异步客户端
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 .. code:: python
 
@@ -130,7 +130,7 @@ Tornado Async Client 异步客户端
 
 欢迎 start、fork 并贡献代码。也欢迎讨论交流、指正。
 
-免费声明
+免责声明
 ========
 
 1. 快递鸟官方 可能会随时推出新的 API，\ ``kdniao_python``

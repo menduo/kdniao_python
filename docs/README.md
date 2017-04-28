@@ -84,7 +84,7 @@ trace_res = client.api_track.track(logistic_code, shipper_code, order_code, time
 # Your logic code here
 ```
 
-### Tornado Async Client 异步客户端
+## Tornado Async Client 异步客户端
 ```python
 from kdniao.client import KdNiaoAsyncClient
 app_id = 12345678
@@ -103,7 +103,7 @@ trace_res = yield async_client.api_track.track(logistic_code, shipper_code, orde
 
 欢迎 start、fork 并贡献代码。也欢迎讨论交流、指正。
 
-# 免费声明
+# 免责声明
 
 1. 快递鸟官方 可能会随时推出新的 API，`kdniao_python` 未必会及时支持。
 2. 快递鸟官方 可能会随时变动 API 协议，包括 API 网址、参数、签名算法等。
