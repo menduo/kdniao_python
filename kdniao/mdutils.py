@@ -14,6 +14,7 @@ def _clean_list(alist):
 
 # Code from tornado.escape
 PY3 = sys.version_info.major == 3
+PY34PLUS = PY3 and sys.version_info.minor >= 4 and sys.version_info.micro >= 2
 bytes_type = bytes
 if PY3:
     unicode_type = str

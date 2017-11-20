@@ -3,6 +3,7 @@
 """
 client, 同步、异步
 """
+import logging
 import json
 import tornado.gen
 import requests
@@ -10,7 +11,7 @@ from tornado.httpclient import HTTPRequest, AsyncHTTPClient
 from kdniao.api import API
 from kdniao.mdutils import utf8, urlencode
 
-from kdniao.conf import HEADERS, KdNiaoConfig, APIErrorCode, BizRespCode
+from kdniao.conf import HEADERS, KdNiaoConfig, APIErrorCode, BizRespCode, DEFAULT_HTTP_RESP
 
 
 class KdNiaoClient(API):
@@ -44,15 +45,17 @@ class KdNiaoClient(API):
 
         try:
             res = self._post(url, rdata, timeout)
-        except requests.exceptions.Timeout:
-            res = requests.Response()
+            setattr(res, "body", res.text)
+        except requests.exceptions.Timeout as exc:
+            logging.error("timeout while request kdniao API: %s", exc, exc_info=True)
+            res = DEFAULT_HTTP_RESP
             res.status_code = 599
             res._content = ""
             res.encoding = "utf-8"
             res.url = url
             res.reason = "timeout"
 
-        resp = self._parse_http_resp(res.status_code, res.reason, res.text, res.url)
+        resp = self._parse_http_resp(res.status_code, res.reason, res.body, res.url)
         res = self._parse_api_resp(resp)
 
         return res
@@ -171,7 +174,7 @@ class KdNiaoClient(API):
 
 class KdNiaoAsyncClient(KdNiaoClient):
     """
-    Non-Blocking Client
+    Non-Blocking Client by Tornado HTTPclient
     """
 
     def __init__(self, app_id, app_key, is_prod=True):
@@ -192,7 +195,7 @@ class KdNiaoAsyncClient(KdNiaoClient):
         :param timeout:
         :return:
         """
-        timeout = kwargs.get("timeout")
+        timeout = kwargs.pop("timeout", None)
         timeout = self._parese_time_out(timeout)
 
         callback = kwargs.get("callback")
@@ -223,6 +226,7 @@ class KdNiaoAsyncClient(KdNiaoClient):
 
         if isinstance(data, dict):
             data = urlencode(data)
+
         req = HTTPRequest(url, "POST", HEADERS, utf8(data), **_timeout)
         resp = yield AsyncHTTPClient().fetch(req, callback, raise_error=False)
         raise tornado.gen.Return(resp)

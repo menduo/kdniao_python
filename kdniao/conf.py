@@ -4,6 +4,7 @@
 API 相关配置
 """
 from kdniao.mdutils import urljoin
+from kdniao import __version__
 
 
 class KdNiaoConfig(object):
@@ -13,7 +14,16 @@ class KdNiaoConfig(object):
 HEADERS = {
     "Accept": "application/x-www-form-urlencoded;charset=utf-8",
     "Accept-Encoding": "utf-8",
+    "'User-Agent'": "github.com/menduo/kdniao_python %s" % __version__,
 }
+
+
+class DEFAULT_HTTP_RESP(object):
+    code = 599
+    status = 599
+    url = None
+    reason = "timeout"
+    body = ""
 
 
 class APIPath(object):

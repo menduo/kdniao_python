@@ -77,7 +77,7 @@ class API(object):
         s = utf8(data + app_key)
         m.update(s)
         digest = utf8(m.hexdigest())
-        b64_str = base64.b64encode(digest)
+        b64_str = base64.b64encode(digest).decode()
         return b64_str
 
     def _prepare_req_params(self, req_type, data):
@@ -88,12 +88,13 @@ class API(object):
         """
         json_data = json.dumps(data, sort_keys=True)
         sign = self.__sign(json_data, self._app_key)
+        print(sign)
         req_params = {
             "RequestData": json_data,
-            "EBusinessID": self._app_id,
-            "RequestType": req_type,  # "1002"
+            "EBusinessID": str(self._app_id),
+            "RequestType": str(req_type),  # "1002"
             "DataSign": sign,
-            "DataType": 2,
+            "DataType": str(2),
         }
         return req_params
 

@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 
 repo_url = "https://github.com/menduo/kdniao_python"
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 setup(
     name="kdniao",
