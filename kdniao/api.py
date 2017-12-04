@@ -88,7 +88,6 @@ class API(object):
         """
         json_data = json.dumps(data, sort_keys=True)
         sign = self.__sign(json_data, self._app_key)
-        print(sign)
         req_params = {
             "RequestData": json_data,
             "EBusinessID": str(self._app_id),
