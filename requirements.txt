@@ -1,2 +1,2 @@
-requests
+requests==2.20.1
 tornado>=4.0.2
